@@ -1,6 +1,6 @@
-# Seattle CoderDojo App Inventor Orientation Workshop
+# Seattle CoderDojo App Inventor Orientation Sensor Workshop
 
-Today we're going to experiment with moving things on the screen by moving the screen.
+Today we're going to experiment with moving things on the screen not by touching the screen, but by moving it.
 
 ## Understanding Pitch and Roll
 
@@ -69,3 +69,53 @@ Add a canvas from "Drawing and Animation." Then drag a ball from "Drawing and An
 It should look like this.
 
 ![screen2](/images/screen2.jpg)
+
+Let's add some code blocks.
+
+![globalx](/images/globalx.jpg)
+
+The first thing we do is set a global variable called "xVal" because we're going to need to do a little extra math with it.
+
+![massageX](/images/massageX.jpg)
+
+Then we'll pull in a to-do procedure block and name it "massageX."
+
+Next, pull in an "if-then" from the control menu, and use the mutator (the little gear in the top left) to add an "else if." 
+
+The "get global xVal" and "set global xVal" blocks come from the "Variables" menu, and the rest come from the math menu. If we didn't do this, you'd have to rotate the phone so the screen was facing away from you to get the ball to go up. Instead, we set it so that if the phone is tilted past 45 degrees, the value starts becoming negative (which makes the ball go up). We have the "else if" to handle when the numbers are negative, like if you flipped the phone around so the top was on the right instead of the left.
+
+![rollit](C:\Users\gregb\OneDrive\CoderDojo\DojoClass\AppInventorOrientation\images\rollit.jpg)
+
+Then, from the Orientation Sensor's menu, we pull in the "when changed" block we used in the last project.
+
+It may seem odd, but because the app sets up and down as the top and bottom of the device, we'll use the Y value to set the side-to-side motion of the ball. Every time this runs, we'll set the ball's Y position to its current position, minus the pitch divided by 3.
+
+Now, if you wanted the ball to move at a constant speed, you might do a "massageY" function that simply set the value to a constant positive or negative value. But by setting how much it moves to a fraction of the pitch, the more you tilt the device, the faster the ball will roll.
+
+Next, we set the global "xVal" variable to the sensor's roll value, run "massageX" on the variable, and set the ball's X position like we set the Y position, but to a third of the massaged roll value instead of the one directly from the sensor. 
+
+It should all look like this.
+
+![rollblocks](/images/rollblocks.jpg)
+
+Try it out. See how it works. You can even adjust some of the numbers to see how it affects the way the ball moves.
+
+## And now... HOMEWORK!
+
+This is the 9th workshop of the two sessions we've done with App Inventor. Now it's time for you to start pulling together everything you learned to make something of your own.
+
+If you don't have a project you want to work on specifically, add to this one. Use things you learned from MoleBash and Flick Golf to make a game that lets you move your screen to move the ball into a goal or through a maze.
+
+Or maybe make something else entirely.
+
+When you're done. Publish your game to the gallery. 
+
+* From the "Projects" menu, select "My projects."
+* Check the box next to the project with your game.
+* Click the "Publish to Gallery" button.
+
+If you want to change the name of your game so it stands out in our gallery search, go to the "Projects" menu and select "Save project as" to save it with a different name. Then you can publish that one.
+
+Next week, we can play some of each other's games, and if you want, you can talk about how you made yours.
+
+Have fun!
