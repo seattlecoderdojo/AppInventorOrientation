@@ -119,3 +119,5 @@ If you want to change the name of your game so it stands out in our gallery sear
 Next week, we can play some of each other's games, and if you want, you can talk about how you made yours.
 
 Have fun!
+
+© 2019 - Copyright 2019 by Greg Bulmash - this content is licensed [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
